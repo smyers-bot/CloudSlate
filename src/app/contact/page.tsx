@@ -146,8 +146,12 @@ export default function ContactPage() {
                   href: "/tools/cost-calculator",
                 },
                 {
+                  label: "Gemini ROI Calculator",
+                  href: "/tools/gemini-roi-calculator",
+                },
+                {
                   label: "Gem Discovery Tool",
-                  href: "/tools/gem-discovery",
+                  href: "/tools/gems-idea-generator",
                 },
               ].map((tool) => (
                 <CTAButton
