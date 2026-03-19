@@ -21,7 +21,7 @@ export const migrationSizes: MigrationSize[] = [
     description:
       "Small team migrations are the fastest path to Google Workspace and Gemini AI. With fewer than 50 users, your team can be fully migrated and AI-enabled in as little as two weeks with minimal disruption.",
     metaDescription:
-      "Migrate 50 users from Microsoft 365 to Google Workspace. 2-week timeline, $15-50/seat, includes free Gemini AI enablement. Save up to 79% on licensing costs.",
+      "Migrate 50 users from Microsoft 365 to Google Workspace. 2-week timeline, $15-50/seat, includes free Gemini AI enablement. Save 40% on average on licensing costs.",
     timeline: "2-3 weeks",
     priceRange: "$15-30/seat",
     considerations: [

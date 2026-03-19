@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Microsoft 365 to Google Workspace Migration | CloudSlate",
   description:
-    "Migrate from Microsoft 365 to Google Workspace and save up to 79% on licensing. Every migration includes a custom Gem and NotebookLM setup at no extra cost.",
+    "Migrate from Microsoft 365 to Google Workspace and save 40% on average on licensing. Every migration includes a custom Gem and NotebookLM setup at no extra cost.",
 };
 
 const migrationItems = [
@@ -80,7 +80,7 @@ export default function MigrationPage() {
       <SchemaMarkup
         type="service"
         name="Microsoft 365 to Google Workspace Migration"
-        description="Migrate from Microsoft 365 to Google Workspace and save up to 79% on licensing. Every migration includes a custom Gem and NotebookLM setup at no extra cost."
+        description="Migrate from Microsoft 365 to Google Workspace and save 40% on average on licensing. Every migration includes a custom Gem and NotebookLM setup at no extra cost."
         priceRange="$15 - $50 per seat"
       />
       {/* Hero */}
@@ -93,7 +93,7 @@ export default function MigrationPage() {
             Migrate from Microsoft 365 to Google Workspace
           </h1>
           <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-slate-300 sm:text-xl">
-            Save up to 79% on licensing costs and unlock Gemini AI capabilities
+            Save 40% on average on licensing costs and unlock Gemini AI capabilities
             that Microsoft charges extra for. We handle every step of the
             migration.
           </p>
@@ -141,7 +141,7 @@ export default function MigrationPage() {
             {/* Workspace Card */}
             <div className="rounded-2xl border-2 border-secondary bg-white p-8 shadow-sm ring-2 ring-secondary/20">
               <div className="mb-3 inline-block rounded-full bg-secondary/10 px-3 py-1 text-xs font-bold text-secondary">
-                79% Savings
+                40% Savings
               </div>
               <p className="mb-1 text-sm font-semibold uppercase tracking-wider text-slate-500">
                 Google Workspace
