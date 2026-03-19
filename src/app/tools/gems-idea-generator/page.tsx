@@ -636,7 +636,20 @@ export default function GemsIdeaGeneratorPage() {
                       <button
                         type="button"
                         disabled={!email}
-                        onClick={() => setEmailSubmitted(true)}
+                        onClick={async () => {
+                          const body = new FormData();
+                          body.append("access_key", "8ee928a3-0d39-42fc-88fd-a03f49e1235c");
+                          body.append("subject", "Gems Idea Generator Results");
+                          body.append("from_name", "CloudSlate Gems Generator");
+                          body.append("email", email);
+                          body.append("Industry", industry);
+                          body.append("Department", department);
+                          body.append("Team Size", teamSize);
+                          body.append("Tasks", tasks.filter(t => t.trim()).join(", "));
+                          body.append("Recommended Gems", results.map(g => `${g.name} (${g.estimatedTimeSaved})`).join(", "));
+                          try { await fetch("https://api.web3forms.com/submit", { method: "POST", body }); } catch {}
+                          setEmailSubmitted(true);
+                        }}
                         className="shrink-0 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-dark disabled:cursor-not-allowed disabled:opacity-50"
                       >
                         Save Results

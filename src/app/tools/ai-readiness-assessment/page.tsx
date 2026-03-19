@@ -602,7 +602,26 @@ export default function AIReadinessAssessmentPage() {
                 <button
                   type="button"
                   disabled={!formData.email}
-                  onClick={() => setShowResults(true)}
+                  onClick={async () => {
+                    const body = new FormData();
+                    body.append("access_key", "8ee928a3-0d39-42fc-88fd-a03f49e1235c");
+                    body.append("subject", "AI Readiness Assessment Submission");
+                    body.append("from_name", "CloudSlate AI Assessment");
+                    body.append("email", formData.email);
+                    body.append("Company", formData.companyName);
+                    body.append("Users", formData.userCount);
+                    body.append("Industry", formData.industry);
+                    body.append("Platform", formData.currentPlatform);
+                    body.append("Workspace Plan", formData.workspacePlan);
+                    body.append("Gemini Usage", formData.geminiUsage);
+                    body.append("Custom Gems", formData.customGems);
+                    body.append("NotebookLM Usage", formData.notebookLMUsage);
+                    body.append("Workflow Challenges", formData.workflowChallenges.join(", "));
+                    body.append("AI Readiness Score", `${score}/100 - ${label}`);
+                    body.append("Recommended Gems", recommendedGems.map(g => g.name).join(", "));
+                    try { await fetch("https://api.web3forms.com/submit", { method: "POST", body }); } catch {}
+                    setShowResults(true);
+                  }}
                   className="w-full rounded-lg bg-primary px-6 py-3 font-semibold text-white transition-colors hover:bg-primary-dark disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   View My Results

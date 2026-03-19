@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CTAButton from "@/components/ui/CTAButton";
+import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact | CloudSlate - Get Started with Gemini AI",
@@ -117,115 +118,7 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <form className="mt-12 space-y-6">
-              <div className="grid gap-6 sm:grid-cols-2">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-semibold text-slate-900"
-                  >
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    autoComplete="name"
-                    required
-                    className="mt-2 block w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm placeholder:text-slate-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-semibold text-slate-900"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    autoComplete="email"
-                    required
-                    className="mt-2 block w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm placeholder:text-slate-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-                    placeholder="you@company.com"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="company"
-                  className="block text-sm font-semibold text-slate-900"
-                >
-                  Company
-                </label>
-                <input
-                  type="text"
-                  id="company"
-                  name="company"
-                  autoComplete="organization"
-                  className="mt-2 block w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm placeholder:text-slate-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-                  placeholder="Your company"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="user-count"
-                  className="block text-sm font-semibold text-slate-900"
-                >
-                  Number of Users
-                </label>
-                <select
-                  id="user-count"
-                  name="user-count"
-                  className="mt-2 block w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-                >
-                  <option value="">Select a range</option>
-                  <option value="1-50">1 - 50</option>
-                  <option value="51-200">51 - 200</option>
-                  <option value="201-500">201 - 500</option>
-                  <option value="501-1000">501 - 1,000</option>
-                  <option value="1001-5000">1,001 - 5,000</option>
-                  <option value="5001+">5,001+</option>
-                </select>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-semibold text-slate-900"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={5}
-                  className="mt-2 block w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm placeholder:text-slate-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-                  placeholder="Tell us about your goals, current setup, and how we can help..."
-                />
-              </div>
-
-              <div>
-                <CTAButton type="submit" variant="primary" size="lg" className="w-full">
-                  Send Message
-                </CTAButton>
-              </div>
-            </form>
-
-            <p className="mt-6 text-center text-sm text-slate-500">
-              Or email us directly at{" "}
-              <a
-                href="mailto:hello@cloudslate.org"
-                className="font-medium text-primary hover:text-primary-dark"
-              >
-                hello@cloudslate.org
-              </a>
-            </p>
+            <ContactForm />
           </div>
         </div>
       </section>

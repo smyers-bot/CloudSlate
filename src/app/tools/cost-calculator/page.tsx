@@ -446,7 +446,24 @@ export default function CostCalculatorPage() {
                       <button
                         type="button"
                         disabled={!email}
-                        onClick={() => setEmailSubmitted(true)}
+                        onClick={async () => {
+                          const body = new FormData();
+                          body.append("access_key", "8ee928a3-0d39-42fc-88fd-a03f49e1235c");
+                          body.append("subject", "Cost Calculator Report Request");
+                          body.append("from_name", "CloudSlate Cost Calculator");
+                          body.append("email", email);
+                          body.append("Users", String(users));
+                          body.append("Current M365 Plan", calc.plan.name);
+                          body.append("Copilot Add-on", copilot ? "Yes" : "No");
+                          body.append("Add-ons", selectedAddons.join(", ") || "None");
+                          body.append("M365 Monthly Cost", formatCurrency(calc.m365Monthly));
+                          body.append("Workspace Monthly Cost", formatCurrency(calc.workspaceMonthly));
+                          body.append("Monthly Savings", formatCurrency(calc.monthlySavings));
+                          body.append("Annual Savings", formatCurrency(calc.annualSavings));
+                          body.append("Term Savings", `${formatCurrency(calc.termSavings)} over ${calc.termLabel}`);
+                          try { await fetch("https://api.web3forms.com/submit", { method: "POST", body }); } catch {}
+                          setEmailSubmitted(true);
+                        }}
                         className="shrink-0 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-dark disabled:cursor-not-allowed disabled:opacity-50"
                       >
                         Send Report
