@@ -50,7 +50,7 @@ export default function Home() {
             We&rsquo;ll migrate you seamlessly&nbsp;&mdash; and save you 40% on average on licensing.
           </p>
 
-          <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:flex-wrap">
             <CTAButton href="/tools/ai-readiness-assessment" size="lg">
               Take the Free AI Readiness Assessment
             </CTAButton>
@@ -61,6 +61,14 @@ export default function Home() {
               className="border-white text-white hover:bg-white/10"
             >
               Calculate Your M365 Savings
+            </CTAButton>
+            <CTAButton
+              href="/tools/gemini-roi-calculator"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white/10"
+            >
+              Estimate Your Gemini ROI
             </CTAButton>
           </div>
         </div>
@@ -391,6 +399,95 @@ export default function Home() {
                   {phase.description}
                 </p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── FREE TOOLS ─── */}
+      <section className="bg-slate-50 py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-sm font-semibold uppercase tracking-widest text-primary">
+              Free Tools
+            </p>
+            <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+              See the Impact Before You Commit
+            </h2>
+            <p className="mt-4 text-lg text-slate-600">
+              No signup required. Use our interactive tools to assess your AI
+              readiness, estimate savings, and discover the right Gems for your team.
+            </p>
+          </div>
+
+          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                title: "AI Readiness Assessment",
+                description:
+                  "Score your organization's AI maturity and get personalized Gem recommendations in under 5 minutes.",
+                href: "/tools/ai-readiness-assessment",
+                icon: (
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                  </svg>
+                ),
+              },
+              {
+                title: "M365 Savings Calculator",
+                description:
+                  "Compare your Microsoft 365 costs against Google Workspace and see your projected savings over 1, 3, and 5 years.",
+                href: "/tools/cost-calculator",
+                icon: (
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                ),
+              },
+              {
+                title: "Gemini ROI Calculator",
+                description:
+                  "Estimate hours saved and dollar value of deploying Gemini AI across your departments. See your ROI instantly.",
+                href: "/tools/gemini-roi-calculator",
+                icon: (
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                  </svg>
+                ),
+              },
+              {
+                title: "Gems Idea Generator",
+                description:
+                  "Discover which custom Gemini Gems could transform your team's workflows based on your industry and tasks.",
+                href: "/tools/gems-idea-generator",
+                icon: (
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+                  </svg>
+                ),
+              },
+            ].map((tool) => (
+              <a
+                key={tool.title}
+                href={tool.href}
+                className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:border-primary hover:shadow-md"
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-light text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+                  {tool.icon}
+                </div>
+                <h3 className="mt-5 text-base font-bold text-slate-900">
+                  {tool.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-slate-600">
+                  {tool.description}
+                </p>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">
+                  Try it free
+                  <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </span>
+              </a>
             ))}
           </div>
         </div>
