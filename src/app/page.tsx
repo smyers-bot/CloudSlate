@@ -37,16 +37,17 @@ export default function Home() {
 
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8 text-center">
           <h1 className="mx-auto max-w-4xl text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl lg:leading-[1.1]">
-            Unlock the AI Already in Your{" "}
+            Get More From{" "}
             <span className="bg-gradient-to-r from-[#4285f4] via-[#34a853] to-[#fbbc04] bg-clip-text text-transparent">
               Google Workspace
             </span>
+            {" "}&mdash; or Make the Switch
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
-            Custom Gemini Gems. NotebookLM deployment. Workspace Flows
-            automation. We build the AI tools your team needs&nbsp;&mdash; using
-            capabilities already included in your Workspace license.
+            Already on Workspace? We&rsquo;ll unlock Gemini AI, custom Gems, and
+            NotebookLM to transform your workflows. Still on Microsoft 365?
+            We&rsquo;ll migrate you seamlessly&nbsp;&mdash; and save you up to 79% on licensing.
           </p>
 
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
