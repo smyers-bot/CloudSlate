@@ -47,7 +47,7 @@ export default function Home() {
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
             Already on Workspace? We&rsquo;ll unlock Gemini AI, custom Gems, and
             NotebookLM to transform your workflows. Still on Microsoft 365?
-            We&rsquo;ll migrate you seamlessly&nbsp;&mdash; and save you up to 79% on licensing.
+            We&rsquo;ll migrate you seamlessly&nbsp;&mdash; and save you 40% on average on licensing.
           </p>
 
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
